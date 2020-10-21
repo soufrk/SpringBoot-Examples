@@ -1,0 +1,12 @@
+package com.example.jobproducerapp.clients;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
+//@FeignClient(value = "jplaceholder", url = "http://localhost/job")
+public interface JobProcessorClient {/*
+    @PostMapping("add/{jobName}")
+    public ResponseEntity<?> addJob(@PathVariable("jobName") String job);
+*/}
