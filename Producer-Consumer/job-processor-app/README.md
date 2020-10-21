@@ -1,3 +1,10 @@
+This app is mimics a job processor, where you can
+* Set size of queue
+* Assign job
+* Mark them as complete
+* Get status of a particular job
+* Get status of all jobs
+
 **How to run the project**
 1.  Make sure Maven is installed in your system.
 2.  Run project `mvn spring-boot:run`
