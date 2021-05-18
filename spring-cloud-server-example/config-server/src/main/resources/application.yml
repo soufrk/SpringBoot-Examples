@@ -1,0 +1,25 @@
+# Set port for local environment
+server:
+  port: 8888
+spring:
+  application:
+    name: My-Config-Server
+  #profiles:
+  #    active: native
+  cloud:
+    config:
+      server:
+        # Git Remote Repository configuration
+        git:
+          uri: https://github.com/kdsalvy/Spring-Boot.git
+          searchPaths:
+            - ConfigRepo
+        # Local Git Repository configuration
+        #native:
+        #  searchLocations: file://../configurations-repository
+
+        # Git Rempote Repository with SSH authentication
+          #preferredAuthentications: publickey
+          #privateKey: |
+          #             ----BEGIN RSA KEY------
+          #             ----END RSA KEY--------
