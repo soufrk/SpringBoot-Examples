@@ -4,21 +4,22 @@ server:
 spring:
   application:
     name: My-Config-Server
-  #profiles:
-  #    active: native
+  profiles:
+      active: native
   cloud:
     config:
       server:
-        # Git Remote Repository configuration
-        git:
-          uri: https://github.com/kdsalvy/Spring-Boot.git
-          searchPaths:
-            - ConfigRepo
-        # Local Git Repository configuration
-        #native:
-        #  searchLocations: file://../configurations-repository
+        # 1. Git Remote Repository configuration
+        #git:
+        #  uri: https://github.com/kdsalvy/Spring-Boot.git
+        #  searchPaths:
+        #    - ConfigRepo
+        
+        # 2. Local Git Repository configuration
+        native:
+          searchLocations: <absolute-path>/spring-cloud-server-example/configurations-repository
 
-        # Git Rempote Repository with SSH authentication
+        # 3.Git Rempote Repository with SSH authentication
           #preferredAuthentications: publickey
           #privateKey: |
           #             ----BEGIN RSA KEY------
