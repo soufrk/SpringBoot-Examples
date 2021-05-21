@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: My-Config-Server
+  profiles:
+    active: composite
+  cloud:
+    config:
+      server:
+        composite:
+          - type: git
+            uri: https://github.com/soufrk/SpringBoot-Examples.git
+            searchPaths:
+             - spring-cloud-server-example/configurations-repository
+          - type: git
+            uri: https://github.com/kdsalvy/Spring-Boot.git
+            searchPaths:
+              - ConfigRepo
+        bootstrap: true
+

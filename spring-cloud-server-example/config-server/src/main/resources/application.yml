@@ -1,14 +1,14 @@
 # Set port for local environment
 server:
   port: 8888
-spring:
-  application:
-    name: My-Config-Server
+#spring:
+#  application:
+#    name: My-Config-Server
   #profiles:
   #    active: native
-  cloud:
-    config:
-      server:
+  #cloud:
+  #  config:
+  #    server:
         # 1. Git Remote Repository configuration
         #git:
         #  uri: https://github.com/kdsalvy/Spring-Boot.git
@@ -20,15 +20,22 @@ spring:
         #  searchLocations: <absolute-path>/spring-cloud-server-example/configurations-repository
 
         # 3.Git Rempote Repository with Basic authentication
-        git:
-          uri: https://github.com/soufrk/SpringBoot-Examples.git
-          username: <user-name>
-          password: <password>
-          searchPaths:
-            - spring-cloud-server-example/configurations-repository
-        # 4.Git Rempote Repository with SSH authentication
-          #skipSslValidation: true
-          #preferredAuthentications: publickey
-          #privateKey: |
-          #             ----BEGIN RSA KEY------
-          #             ----END RSA KEY--------
+        #git:
+        #  uri: https://github.com/soufrk/SpringBoot-Examples.git
+        #  username: <user-name>
+        #  password: <password>
+        #  searchPaths:
+        #    - spring-cloud-server-example/configurations-repository
+        
+        # 4.Git Remote Repository with SSH authentication
+        #git:
+        #  uri:  git@github.com:soufrk/SpringBoot-Examples.git
+        #  searchPaths:
+        #    - spring-cloud-server-example/configurations-repository
+        #  skipSslValidation: true
+        #  hostKeyAlgorithm: ssh-rsa
+        #  preferredAuthentications: publickey
+        #  privateKey: |
+        #               -----BEGIN RSA PRIVATE KEY-----
+        #               -----END RSA PRIVATE KEY-----
+        # 5.Composite configuration - mulitple Git Repository with SSH authentication
