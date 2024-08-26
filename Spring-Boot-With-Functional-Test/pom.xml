@@ -16,7 +16,7 @@
 		<!--<springboot.version>2.0.6.RELEASE</springboot.version>-->
 		<!--<swagger.version>2.7.0</swagger.version>-->
 		<springboot.version>2.4.5</springboot.version>
-		<swagger.version>2.9.2</swagger.version>
+		<swagger.version>2.10.0</swagger.version>
 	</properties>
 	<modules>
 		<module>sample-app</module>
